@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8400B585-6E0B-4E14-9749-AA71F6222C0C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CarGallery</RootNamespace>
+    <AssemblyName>CarGallery</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>D:\Mine\Projects\Osama\Company Management System\Company Management System\UI Controls\Guna UI\Guna UI Framework Ultimate 2.0.0.1\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>UI Controls\Guna UI\Guna UI Framework Ultimate 2.0.0.1\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Logic\Presenter\AddCarPresenter.cs" />
+    <Compile Include="Logic\Presenter\CarMangmentPresenter.cs" />
+    <Compile Include="Logic\Presenter\AddCompanyPresenter.cs" />
+    <Compile Include="Logic\Presenter\CompanyMangmentPresenter.cs" />
+    <Compile Include="Logic\Presenter\LoginPresenter.cs" />
+    <Compile Include="Logic\Presenter\MainPresenter.cs" />
+    <Compile Include="Logic\Presenter\SignupPresenter.cs" />
+    <Compile Include="Logic\Presenter\UserMangmentPresenter.cs" />
+    <Compile Include="Logic\Services\CarServices.cs" />
+    <Compile Include="Logic\Services\CompanyServices.cs" />
+    <Compile Include="Logic\Services\DbHelper.cs" />
+    <Compile Include="Logic\Services\UserServices.cs" />
+    <Compile Include="Model\CarModel.cs" />
+    <Compile Include="Model\CompanyModel.cs" />
+    <Compile Include="Model\UserModel.cs" />
+    <Compile Include="View\Forms\Frm_AddCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Frm_AddCar.Designer.cs">
+      <DependentUpon>Frm_AddCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Frm_AddCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Frm_AddCompany.Designer.cs">
+      <DependentUpon>Frm_AddCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Frm_CarDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Frm_CarDetails.Designer.cs">
+      <DependentUpon>Frm_CarDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Frm_SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Frm_SignUp.Designer.cs">
+      <DependentUpon>Frm_SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Frm_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Frm_Home.Designer.cs">
+      <DependentUpon>Frm_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\UserControl_CompanyMangment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Forms\UserControl_CompanyMangment.designer.cs">
+      <DependentUpon>UserControl_CompanyMangment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\UserControl_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Forms\UserControl_Main.Designer.cs">
+      <DependentUpon>UserControl_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\UserControl_UserMangment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Forms\UserControl_UserMangment.Designer.cs">
+      <DependentUpon>UserControl_UserMangment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\UserControl_CarMangment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Forms\UserControl_CarMangment.Designer.cs">
+      <DependentUpon>UserControl_CarMangment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Interface\IAddCar.cs" />
+    <Compile Include="View\Interface\ICarDetails.cs" />
+    <Compile Include="View\Interface\ICarMangment.cs" />
+    <Compile Include="View\Interface\ICompanyAdd.cs" />
+    <Compile Include="View\Interface\ICompanyMangment.cs" />
+    <Compile Include="View\Interface\ILogin.cs" />
+    <Compile Include="View\Interface\IMain.cs" />
+    <Compile Include="View\Interface\ISignUp.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Interface\IUserMangment.cs" />
+    <EmbeddedResource Include="View\Forms\Frm_AddCar.resx">
+      <DependentUpon>Frm_AddCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Frm_AddCompany.resx">
+      <DependentUpon>Frm_AddCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Frm_CarDetails.resx">
+      <DependentUpon>Frm_CarDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Frm_SignUp.resx">
+      <DependentUpon>Frm_SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Frm_Home.resx">
+      <DependentUpon>Frm_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\UserControl_CompanyMangment.resx">
+      <DependentUpon>UserControl_CompanyMangment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\UserControl_Main.resx">
+      <DependentUpon>UserControl_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\Forms\UserControl_UserMangment.resx">
+      <DependentUpon>UserControl_UserMangment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\UserControl_CarMangment.resx">
+      <DependentUpon>UserControl_CarMangment.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-11.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Carly1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
